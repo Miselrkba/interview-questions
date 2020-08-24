@@ -1,24 +1,50 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import { data } from "./data";
+
+import "./App.css";
+import { Questionaire } from "./components/Questionaire";
+import { Buttons } from "./components/Buttons";
 
 function App() {
+  const [question, setQuestion] = useState("");
+  // const [isChecked, setIsChecked] = useState(true);
+  const [count, setCount] = useState(0);
+
+  const questions = data.map((item) => item.question);
+
+  const nextQuestion = () => {
+    setCount(count + 1 );
+    if(count > questions.length){alert('your reached last question')}
+    setQuestion(questions[count]);
+    console.log(count);
+  };
+
+  const prevQuestion = () => {
+    setCount(count - 1 );
+    if(count === -1){return}
+    setQuestion(questions[count]);
+    console.log(count);
+  };
+
+  const getQuestion = () => {};
+
+  const randomQuestion = () => {
+    const rand = Math.floor(Math.random() * questions.length);
+    const anyQuestion = questions[rand];
+    setQuestion(anyQuestion);
+  };
+
+  useEffect(randomQuestion, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Questionaire question={question} />
+      <Buttons
+        getQuestion={getQuestion}
+        prevQuestion={prevQuestion}
+        nextQuestion={nextQuestion}
+        randomQuestion={randomQuestion}
+      />
     </div>
   );
 }
