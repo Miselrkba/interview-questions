@@ -1,52 +1,72 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { data } from "./data";
 
 import "./App.css";
 import { Questionaire } from "./components/Questionaire";
 import { Buttons } from "./components/Buttons";
 
-function App() {
-  const [question, setQuestion] = useState("");
-  // const [isChecked, setIsChecked] = useState(true);
-  const [count, setCount] = useState(0);
+const questions = data.map((item) => item.question);
+const answers = data.map((item) => item.answer);
 
-  const questions = data.map((item) => item.question);
-
-  const nextQuestion = () => {
-    setCount(count + 1 );
-    if(count > questions.length){alert('your reached last question')}
-    setQuestion(questions[count]);
-    console.log(count);
+class App extends React.Component {
+  state = {
+    question: "",
+    answer: "",
+    count: 0,
   };
 
-  const prevQuestion = () => {
-    setCount(count - 1 );
-    if(count === -1){return}
-    setQuestion(questions[count]);
-    console.log(count);
+  getQuestion = () => {
+    this.setState({
+      count: 0,
+      question: questions[0],
+      answer: answers[0]
+    });
   };
 
-  const getQuestion = () => {};
+ 
+  prevQuestion = () => {
+    this.setState((prevState) => ({
+      count: prevState.count - 1,
+      question: questions[prevState.count - 1],
+    }));
+    
+  };
 
-  const randomQuestion = () => {
+  nextQuestion = () => {
+    this.setState((prevState) => ({
+      count: prevState.count + 1,
+      question: questions[prevState.count + 1],
+    }));
+    
+  };
+
+  randomQuestion = () => {
     const rand = Math.floor(Math.random() * questions.length);
     const anyQuestion = questions[rand];
-    setQuestion(anyQuestion);
+    const anyAnswer = answers[rand];
+    this.setState({
+      question: anyQuestion,
+      answer: anyAnswer,
+    });
   };
 
-  useEffect(randomQuestion, []);
-
-  return (
-    <div className="App">
-      <Questionaire question={question} />
-      <Buttons
-        getQuestion={getQuestion}
-        prevQuestion={prevQuestion}
-        nextQuestion={nextQuestion}
-        randomQuestion={randomQuestion}
-      />
-    </div>
-  );
+  render() {
+    return (
+      <div className="App">
+        {this.state.count}
+        <Questionaire
+          question={this.state.question}
+          answer={this.state.answer}
+        />
+        <Buttons
+          getQuestion={this.getQuestion}
+          prevQuestion={this.prevQuestion}
+          nextQuestion={this.nextQuestion}
+          randomQuestion={this.randomQuestion}
+        />
+      </div>
+    );
+  }
 }
 
 export default App;
