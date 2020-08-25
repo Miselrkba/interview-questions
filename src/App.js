@@ -5,8 +5,6 @@ import "./App.css";
 import { Questionaire } from "./components/Questionaire";
 import { Buttons } from "./components/Buttons";
 
-// const questions = data.map((item) => item.question);
-
 class App extends React.Component {
   state = {
     count: 0,
@@ -59,8 +57,37 @@ class App extends React.Component {
     const questions = data.map((item) => item.question);
     const answers = data.map((item) => item.answer);
 
+    const getHtml = data.filter((x) => x.language === "Html");
+    const getCss = data.filter((x) => x.language === "Css");
+    const getJs = data.filter((x) => x.language === "JavaScript");
+    const getReact = data.filter((x) => x.language === "React");
+
+    const oneHtmlQuestion = getHtml.map((item) => item.question);
+    const oneCssQuestion = getCss.map((item) => item.question);
+    const oneJsQuestion = getJs.map((item) => item.question);
+    const oneReactQuestion = getReact.map((item) => item.question);
+
+    let result = [];
+
+    if (this.state.html) {
+      result.push(...oneHtmlQuestion);
+    }
+    if (this.state.css) {
+      result.push(...oneCssQuestion);
+    }
+    if (this.state.javascript) {
+      result.push(...oneJsQuestion);
+    }
+    if (this.state.react) {
+      // const htmlCss = oneHtmlQuestion.concat(oneCssQuestion);
+      result.push(...oneReactQuestion);
+    }
+
+    console.log(result);
+
     return (
       <div className="App">
+        <h1>Interview Questions</h1>
         {this.state.count}
         <Questionaire
           question={questions[this.state.count]}
@@ -76,6 +103,8 @@ class App extends React.Component {
           data={data}
           count={this.state.count}
         />
+        <h3>Question: {result[this.state.count]}</h3>
+        <h3>Answer: </h3>
         <Buttons
           getQuestion={this.getQuestion}
           prevQuestion={this.prevQuestion}

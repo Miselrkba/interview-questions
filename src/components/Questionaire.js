@@ -37,6 +37,8 @@ export const Questionaire = ({
   const oneJsQuestion = getJs.map((item) => item.question);
   const oneReactQuestion = getReact.map((item) => item.question);
 
+  const htmlCss = oneHtmlQuestion.concat(oneCssQuestion);
+
   // if Html is checked i want to have and array that displays only html questions
 
   return (
@@ -64,7 +66,7 @@ export const Questionaire = ({
         </h1>
       </nav>
       <div>
-        <h3>
+        {/* <h3>
           Question:{" "}
           {html
             ? oneHtmlQuestion[count]
@@ -75,9 +77,10 @@ export const Questionaire = ({
             : react
             ? oneReactQuestion[count]
             : question}
-        </h3>
-
-        <h3>Answer: {answer} </h3>
+        </h3> */}
+{/* 
+        <h3>Question: {question}</h3>
+        <h3>Answer: {answer} </h3> */}
       </div>
     </>
   );
