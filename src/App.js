@@ -5,58 +5,76 @@ import "./App.css";
 import { Questionaire } from "./components/Questionaire";
 import { Buttons } from "./components/Buttons";
 
-const questions = data.map((item) => item.question);
-const answers = data.map((item) => item.answer);
+// const questions = data.map((item) => item.question);
 
 class App extends React.Component {
   state = {
-    question: "",
-    answer: "",
     count: 0,
+    html: false,
+    css: false,
+    javascript: false,
+    react: false,
   };
 
-  getQuestion = () => {
+  handleHtml = (html) => {
     this.setState({
-      count: 0,
-      question: questions[0],
-      answer: answers[0]
+      html: html,
+    });
+  };
+  handleCss = (css) => {
+    this.setState({
+      css: css,
+    });
+  };
+  handleJs = (javascript) => {
+    this.setState({
+      javascript: javascript,
+    });
+  };
+  handleReact = (react) => {
+    this.setState({
+      react: react,
     });
   };
 
- 
   prevQuestion = () => {
-    this.setState((prevState) => ({
-      count: prevState.count - 1,
-      question: questions[prevState.count - 1],
-    }));
-    
+    this.setState({
+      count: this.state.count - 1,
+    });
+    if (this.state.count <= 0) {
+      this.setState({ count: 0 });
+    }
   };
 
   nextQuestion = () => {
-    this.setState((prevState) => ({
-      count: prevState.count + 1,
-      question: questions[prevState.count + 1],
-    }));
-    
-  };
-
-  randomQuestion = () => {
-    const rand = Math.floor(Math.random() * questions.length);
-    const anyQuestion = questions[rand];
-    const anyAnswer = answers[rand];
     this.setState({
-      question: anyQuestion,
-      answer: anyAnswer,
+      count: this.state.count + 1,
     });
+    if (this.state.count >= 11) {
+      this.setState({ count: 0 });
+    }
   };
 
   render() {
+    const questions = data.map((item) => item.question);
+    const answers = data.map((item) => item.answer);
+
     return (
       <div className="App">
         {this.state.count}
         <Questionaire
-          question={this.state.question}
-          answer={this.state.answer}
+          question={questions[this.state.count]}
+          answer={answers[this.state.count]}
+          html={this.state.html}
+          css={this.state.css}
+          javascript={this.state.javascript}
+          react={this.state.react}
+          handleHtml={this.handleHtml}
+          handleCss={this.handleCss}
+          handleJs={this.handleJs}
+          handleReact={this.handleReact}
+          data={data}
+          count={this.state.count}
         />
         <Buttons
           getQuestion={this.getQuestion}
