@@ -68,7 +68,7 @@ const App = () => {
   const prevQuestion = () => {
     setCount(count - 1);
     if (count <= 0) {
-      setCount(question.length -1);
+      setCount(question.length - 1);
     }
     if (question.length === 0) alert("please pick a language or library first");
   };
@@ -102,14 +102,15 @@ const App = () => {
         handleJs={setJs}
         handleReact={setReact}
       />
-      <h3>Question: {question[count]}</h3>
+      <h3>Question: </h3>
+      <div className="question">{question[count]}</div>
       <button
         disabled={html || css || react || js ? false : true}
         onClick={clicked}
       >
         Show Answer{" "}
       </button>
-      <h3>{toggle ? answer[count] : null}</h3>
+      <div className="answer"> {toggle ? answer[count] : null}</div>
 
       <Buttons
         prevQuestion={prevQuestion}
