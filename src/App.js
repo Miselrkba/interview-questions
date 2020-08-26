@@ -14,10 +14,6 @@ const App = () => {
   const [react, setReact] = useState(false);
   const [toggle, setToggle] = useState(false);
 
-  // map for q and a
-  const questions = data.map((item) => item.question);
-  const answers = data.map((item) => item.answer);
-
   // filter and map questions
   const getHtml = data.filter((x) => x.language === "Html");
   const getCss = data.filter((x) => x.language === "Css");
@@ -83,17 +79,10 @@ const App = () => {
     }
   };
 
-  // radom question push
   const randomQuestion = () => {
-    question.push(...oneHtmlQuestion);
-    console.log(question);
+    const rand = Math.floor(Math.random() * question.length);
+    setCount(rand);
   };
-
-  // const rand = Math.floor(Math.random() * questions.length);
-
-  console.log(question);
-  console.log(answer);
-  console.log(questions);
 
   // click event to toggle Show answer
   const clicked = () => {
@@ -105,25 +94,16 @@ const App = () => {
       <h1>Interview Questions</h1>
       <p>please pick a language or library</p>
       <Questionaire
-        question={questions[count]}
-        answer={answers[count]}
-        html={html}
-        css={css}
-        js={js}
-        react={react}
         handleHtml={setHtml}
         handleCss={setCss}
         handleJs={setJs}
         handleReact={setReact}
-        data={data}
-        count={count}
       />
       <h3>Question: {question[count]}</h3>
       <button onClick={clicked}>Show Answer </button>
       <h3>{toggle ? answer[count] : null}</h3>
 
       <Buttons
-        // getQuestion={getQuestion}
         prevQuestion={prevQuestion}
         nextQuestion={nextQuestion}
         randomQuestion={randomQuestion}
