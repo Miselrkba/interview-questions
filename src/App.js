@@ -1,119 +1,135 @@
-import React from "react";
+import React, { useState } from "react";
 import { data } from "./data";
 
 import "./App.css";
 import { Questionaire } from "./components/Questionaire";
 import { Buttons } from "./components/Buttons";
 
-class App extends React.Component {
-  state = {
-    count: 0,
-    html: false,
-    css: false,
-    javascript: false,
-    react: false,
-  };
+const App = () => {
+  //set state for count and languages
+  const [count, setCount] = useState(0);
+  const [html, setHtml] = useState(false);
+  const [css, setCss] = useState(false);
+  const [js, setJs] = useState(false);
+  const [react, setReact] = useState(false);
+  const [toggle, setToggle] = useState(false);
 
-  handleHtml = (html) => {
-    this.setState({
-      html: html,
-    });
-  };
-  handleCss = (css) => {
-    this.setState({
-      css: css,
-    });
-  };
-  handleJs = (javascript) => {
-    this.setState({
-      javascript: javascript,
-    });
-  };
-  handleReact = (react) => {
-    this.setState({
-      react: react,
-    });
-  };
+  // map for q and a
+  const questions = data.map((item) => item.question);
+  const answers = data.map((item) => item.answer);
 
-  prevQuestion = () => {
-    this.setState({
-      count: this.state.count - 1,
-    });
-    if (this.state.count <= 0) {
-      this.setState({ count: 0 });
-    }
-  };
+  // filter and map questions
+  const getHtml = data.filter((x) => x.language === "Html");
+  const getCss = data.filter((x) => x.language === "Css");
+  const getJs = data.filter((x) => x.language === "JavaScript");
+  const getReact = data.filter((x) => x.language === "React");
 
-  nextQuestion = () => {
-    this.setState({
-      count: this.state.count + 1,
-    });
-    if (this.state.count >= 11) {
-      this.setState({ count: 0 });
-    }
-  };
+  //get array of questions
+  const oneHtmlQuestion = getHtml.map((item) => item.question);
+  const oneCssQuestion = getCss.map((item) => item.question);
+  const oneJsQuestion = getJs.map((item) => item.question);
+  const oneReactQuestion = getReact.map((item) => item.question);
 
-  render() {
-    const questions = data.map((item) => item.question);
-    const answers = data.map((item) => item.answer);
+  //get array of answers
+  const oneHtmlAnswer = getHtml.map((item) => item.answer);
+  const oneCssAnswer = getCss.map((item) => item.answer);
+  const oneJsAnswer = getJs.map((item) => item.answer);
+  const oneReactAnswer = getReact.map((item) => item.answer);
 
-    const getHtml = data.filter((x) => x.language === "Html");
-    const getCss = data.filter((x) => x.language === "Css");
-    const getJs = data.filter((x) => x.language === "JavaScript");
-    const getReact = data.filter((x) => x.language === "React");
+  // push to question array onChecked
+  let question = [];
 
-    const oneHtmlQuestion = getHtml.map((item) => item.question);
-    const oneCssQuestion = getCss.map((item) => item.question);
-    const oneJsQuestion = getJs.map((item) => item.question);
-    const oneReactQuestion = getReact.map((item) => item.question);
-
-    let result = [];
-
-    if (this.state.html) {
-      result.push(...oneHtmlQuestion);
-    }
-    if (this.state.css) {
-      result.push(...oneCssQuestion);
-    }
-    if (this.state.javascript) {
-      result.push(...oneJsQuestion);
-    }
-    if (this.state.react) {
-      // const htmlCss = oneHtmlQuestion.concat(oneCssQuestion);
-      result.push(...oneReactQuestion);
-    }
-
-    console.log(result);
-
-    return (
-      <div className="App">
-        <h1>Interview Questions</h1>
-        {this.state.count}
-        <Questionaire
-          question={questions[this.state.count]}
-          answer={answers[this.state.count]}
-          html={this.state.html}
-          css={this.state.css}
-          javascript={this.state.javascript}
-          react={this.state.react}
-          handleHtml={this.handleHtml}
-          handleCss={this.handleCss}
-          handleJs={this.handleJs}
-          handleReact={this.handleReact}
-          data={data}
-          count={this.state.count}
-        />
-        <h3>Question: {result[this.state.count]}</h3>
-        <h3>Answer: </h3>
-        <Buttons
-          getQuestion={this.getQuestion}
-          prevQuestion={this.prevQuestion}
-          nextQuestion={this.nextQuestion}
-          randomQuestion={this.randomQuestion}
-        />
-      </div>
-    );
+  if (html) {
+    question.push(...oneHtmlQuestion);
   }
-}
+  if (css) {
+    question.push(...oneCssQuestion);
+  }
+  if (js) {
+    question.push(...oneJsQuestion);
+  }
+  if (react) {
+    question.push(...oneReactQuestion);
+  }
+
+  // push to answer array onChecked
+  let answer = [];
+
+  if (html) {
+    answer.push(...oneHtmlAnswer);
+  }
+  if (css) {
+    answer.push(...oneCssAnswer);
+  }
+  if (js) {
+    answer.push(...oneJsAnswer);
+  }
+  if (react) {
+    answer.push(...oneReactAnswer);
+  }
+
+  //Questions handling
+  const prevQuestion = () => {
+    setCount(count - 1);
+    if (count <= 0) {
+      setCount(count);
+    }
+  };
+
+  const nextQuestion = () => {
+    setCount(count + 1);
+    if (question.length - 1 <= count) {
+      setCount(0);
+    }
+  };
+
+  // radom question push
+  const randomQuestion = () => {
+    question.push(...oneHtmlQuestion);
+    console.log(question);
+  };
+
+  // const rand = Math.floor(Math.random() * questions.length);
+
+  console.log(question);
+  console.log(answer);
+  console.log(questions);
+
+  // click event to toggle Show answer
+  const clicked = () => {
+    setToggle(!toggle);
+  };
+
+  return (
+    <div className="App">
+      <h1>Interview Questions</h1>
+      <p>please pick a language or library</p>
+      <Questionaire
+        question={questions[count]}
+        answer={answers[count]}
+        html={html}
+        css={css}
+        js={js}
+        react={react}
+        handleHtml={setHtml}
+        handleCss={setCss}
+        handleJs={setJs}
+        handleReact={setReact}
+        data={data}
+        count={count}
+      />
+      <h3>Question: {question[count]}</h3>
+      <button onClick={clicked}>Show Answer </button>
+      <h3>{toggle ? answer[count] : null}</h3>
+
+      <Buttons
+        // getQuestion={getQuestion}
+        prevQuestion={prevQuestion}
+        nextQuestion={nextQuestion}
+        randomQuestion={randomQuestion}
+      />
+    </div>
+  );
+};
 
 export default App;

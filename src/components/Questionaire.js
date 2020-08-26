@@ -27,17 +27,17 @@ export const Questionaire = ({
     handleReact(e.target.checked);
   };
 
-  const getHtml = data.filter((x) => x.language === "Html");
-  const getCss = data.filter((x) => x.language === "Css");
-  const getJs = data.filter((x) => x.language === "JavaScript");
-  const getReact = data.filter((x) => x.language === "React");
+  // const getHtml = data.filter((x) => x.language === "Html");
+  // const getCss = data.filter((x) => x.language === "Css");
+  // const getJs = data.filter((x) => x.language === "JavaScript");
+  // const getReact = data.filter((x) => x.language === "React");
 
-  const oneHtmlQuestion = getHtml.map((item) => item.question);
-  const oneCssQuestion = getCss.map((item) => item.question);
-  const oneJsQuestion = getJs.map((item) => item.question);
-  const oneReactQuestion = getReact.map((item) => item.question);
+  // const oneHtmlQuestion = getHtml.map((item) => item.question);
+  // const oneCssQuestion = getCss.map((item) => item.question);
+  // const oneJsQuestion = getJs.map((item) => item.question);
+  // const oneReactQuestion = getReact.map((item) => item.question);
 
-  const htmlCss = oneHtmlQuestion.concat(oneCssQuestion);
+  // const htmlCss = oneHtmlQuestion.concat(oneCssQuestion);
 
   // if Html is checked i want to have and array that displays only html questions
 
