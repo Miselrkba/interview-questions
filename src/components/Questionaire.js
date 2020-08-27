@@ -4,6 +4,7 @@ export const Questionaire = ({
   handleHtml,
   handleCss,
   handleJs,
+
   handleReact,
 }) => {
   const handleHtmlChange = (e) => {
@@ -22,22 +23,22 @@ export const Questionaire = ({
   return (
     <>
       <nav className="navbar">
-        <h1>
+        <h3>
           Html
           <input type="checkbox" onChange={handleHtmlChange} />
-        </h1>
-        <h1>
+        </h3>
+        <h3>
           Css
           <input type="checkbox" onChange={handleCssChange} />
-        </h1>
-        <h1>
+        </h3>
+        <h3>
           JavaScript
           <input type="checkbox" onChange={handleJsChange} />
-        </h1>
-        <h1>
+        </h3>
+        <h3>
           React
           <input type="checkbox" onChange={handleReactChange} />
-        </h1>
+        </h3>
       </nav>
       <div></div>
     </>
