@@ -105,6 +105,7 @@ const App = () => {
       <h3>Question: </h3>
       <div className="question">{question[count]}</div>
       <button
+        className="btn"
         disabled={html || css || react || js ? false : true}
         onClick={clicked}
       >
