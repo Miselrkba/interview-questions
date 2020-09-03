@@ -1,5 +1,17 @@
-array: [
-  
+array = [
+  {
+    id: "c1",
+    language: "Css",
+    question: `67. `,
+    answer: `  `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `68. `,
+    answer: `  `,
+  },
+
   {
     id: "j1",
     language: "JavaScript",

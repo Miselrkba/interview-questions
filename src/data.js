@@ -30,24 +30,624 @@ export const data = [
   {
     id: "c1",
     language: "Css",
-    question: `What is CSS question 1?
+    question: `1. What is CSS? `,
+    answer: `CSS is referred to as the Cascading Style Sheet. CSS outlines the style and behaviour of an HTML webpage.
+    It is a technology developed by the World Wide Web Consortium or W3C. It was developed to streamline the styling of webpages into a separate technology. 
+    The following are the major versions of CSS
+    1. CSS 1
+    2. CSS 2
+    3. CSS 2.1
+    4. CSS 3
+    5. CSS 4 `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `2. What are the different ways you could integrate CSS into your HTML page?`,
+    answer: `There are three ways that you could integrate a certain CSS style:
+    1. You can integrate your style using the style-tags in the head section of your HTML page.
+    2. You can integrate your style using inline-styling.
+    3. You can write your CSS in a separate file and add it to your HTML page using the link tag. `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `3. Name all the modules which are used in the current version of CSS. `,
+    answer: `Answer: There are several modules in CSS as stated below:
+    Selectors
+    Box Model
+    Backgrounds and Borders
+    Text Effects
+    2D/3D Transformations
+    Animations
+    Multiple Column Layout
+    User Interface. `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `4. What is the meaning of cascading? How do style sheets cascade?`,
+    answer: `Cascading means to pass (something) on to a succession of others. CSS brought about a revolution in web-development and how people perceive the process of building a website. Prior to the existence of CSS, elements had to be styled in an in-line fashion or the style were implemented in the head section of an HTML page. This was changed due to the cascading nature of CSS. Here are the three major ways CSS cascades:
+    1. Elements –  The same CSS style can be applied to multiple elements to achieve the same style.
+    2. Multiple Style One Element – Multiple styles can be applied to a particular HTML element to achieve a unique style.
+    3. Same style, Multiple Pages – The same stylesheet can be applied to different HTML pages altogether to achieve a template styling very quickly. `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `5. What are the advantages of using CSS? `,
+    answer: `The style of several documents can be controlled from a single site by using them.
+    Multiple HTML elements can have many documents, where classes can be created.
+    To group styles in complex situations, selector and grouping methods are used. `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `6. Name a few prominent CSS frameworks.`,
+    answer: `Bootstrap
 
-    CSS outlines the style of an HTML webpage. It is a language by which we can set the behavior of an HTML webpage. It describes how the HTML content will be shown on screen.
+    Bootstrap is the most popular CSS framework for developing responsive and mobile-first websites. Bootstrap 4 is the newest version of Bootstrap
     
-    CSS controls the layout of several HTML web pages. CSS is referred to as the Cascading Style Sheet.`,
-    answer: `Css Answer1 ipsum dolor sit amet consectetur adipisicing elit. Eum, adipisci!`,
+    Foundation
+    
+    Foundation is a responsive front-end framework. Foundation provides a responsive grid and HTML and CSS UI components, templates, and code snippets, including typography, forms, buttons, navigation and other interface elements, as well as optional functionality provided by JavaScript extensions.
+    
+    Semantic UI
+    Semantic UI is a modern front-end development framework, powered by LESS(CSS-semantic ui logo - css interview questions - edurekapreprocessor) and jQuery. It has a sleek, subtle, and flat design look that provides a lightweight user experience.
+    
+    Ulkit
+    UIkit is a lightweight and modular front-end framework for developing fast and UIkit logo - css interview questions - edurekapowerful web interfaces. `,
   },
   {
-    id: "c2",
+    id: "c1",
     language: "Css",
-    question: `radom CSS question 2`,
-    answer: `Css Answer2 ipsum dolor sit amet consectetur adipisicing elit. Eum, adipisci!`,
+    question: `7. What is the difference between the usage of an ID and a Class?`,
+    answer: ` ID – An ID is unique. A particular ID can be only assigned to a single element. IDs are used when specific styling is being tried to be achieved over a single element. Below is a pictorial example of how to use an ID.
+
+
+    Class – Just like the word suggests, a class is a collective way of targetting HTML elements for styling. Classes are not unique and multiple elements can have the same class. In fact, multiple classes can also be added to the same element to achieve the desired style and look. Below is an example of the usage of classes.
+    `,
   },
   {
-    id: "c3",
+    id: "c1",
     language: "Css",
-    question: `random css questio 3`,
-    answer: `ACss nswer3 ipsum dolor sit amet consectetur adipisicing elit. Eum, adipisci!`,
+    question: `8. What is the RGB stream? `,
+    answer: ` RGB is a system of representing a certain colour in CSS. There are three streams in this nomenclature of representing a colour, namely the Red, Green and Blue stream. The intensity of the three colours is represented in numbers ranging from 0 to 256. This allows CSS to have a wide range of colours spreading across the entire spectrum of visible colours. `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `9. What are web safe fonts and fallback fonts?`,
+    answer: `Not all operating systems and browsers have the same fonts installed. Web safe fonts are fonts that are commonly pre-installed on many computer systems, such as Arial and Times New Roman. In case the browser or operating system doesn’t recognize the first font you set (e.g. Ubuntu), you should choose a web safe fallback font to display (e.g. Arial), followed by a generic font family (e.g. sans-serif). If your fallback font doesn’t display either, the browser can pick a generic font in the sans-serif family. `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `10. What are the ways to assign a certain colour to an element in CSS?`,
+    answer: `Hexadecimal notation
+    *******
+    A colour in hexadecimal string notation always begins with the character “#”. After that, the hexadecimal digits of the colour code is written. The string is case-insensitive.
+    RGB functional notation
+    *******
+    RGB (Red/Green/Blue) functional notation, like hexadecimal string notation, represents colours using their red, green, and blue components (as well as, optionally, an alpha channel component for opacity). However, instead of using a string, the colour is defined using the CSS function RGB(). This function accepts as its input parameters the values of the red, green, and blue components and an optional fourth parameter, the value for the alpha channel.
+    HSL functional notation
+    *******
+    Designers and artists often prefer to work using the HSL (Hue/Saturation/Luminosity) colour method. On the web, HSL colours are represented using HSL functional notation. The HSL() CSS function is very similar to the RGB() function in usage otherwise
+     `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `11. Explain the CSS Box Model and its different elements.`,
+    answer: `The CSS box model describes the rectangular boxes that are generated for elements in the document tree and laid out according to the visual formatting model. Each box has a content area (e.g. text, an image, etc.) and an optional surrounding padding, border, and margin
+    The box model has the following rules:
+The dimensions of a block element are calculated by width, height, padding, borders, and margin.
+If no height is specified, a block element will be as high as the content it contains, plus padding.
+If no width is specified, a non-floated block element will expand to fit the width of its parent minus padding.
+The height of an element is calculated by the content’s height.
+The width of an element is calculated by the content’s width.
+By default, padding and border are not part of the width and height of an element. `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `12. What is the z-index in CSS? `,
+    answer: `The z-index helps specify the stack order of positioned elements that may overlap one another. The z-index default value is zero and can take on either a positive or negative number.
+    An element with a higher z-index is always stacked above than a lower index. Auto: Sets the stack order equal to its parents.
+    Number: Orders the stack order.
+    Initial: Sets this property to its default value (0).
+    Inherit: Inherits this property from its parent element.`,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `13. What are CSS Sprites? `,
+    answer: `CSS sprites combine multiple images into one single larger image. It is a commonly-used technique for icons (Gmail uses it). This is how you could implement it:
+    1. Use a sprite generator that packs multiple images into one and generates the appropriate CSS for it.
+    2. Each image would have a corresponding CSS class with background-image, background-position and background-size properties defined.
+    3. To use that image, add the corresponding class to your element. `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `14. What are pseudo-elements in CSS? `,
+    answer: `A CSS pseudo-element is a keyword added to a selector that lets you style a specific part of the selected element(s). They can be used for decoration (:first-line, :first-letter) or adding elements to the markup (combined with content: ...) without having to modify the markup (:before, :after).
+    `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `15. How will you target an h2 and h3 with the same styling? `,
+    answer: `You can target multiple elements by separating the separators with a comma (,)
+    h2, h3 {
+    color: blue;
+    } `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `16. What is the float property used for in CSS?`,
+    answer: `The float CSS property places an element on the left or right side of its container, allowing text and inline elements to wrap around it. The element is removed from the normal flow of the page, though it still remains a part of the flow (in contrast to absolute positioning). Below is the usage of float
+    float: none;
+    float: left;
+    float: right;  `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `17. What are the different media types allowed by CSS?`,
+    answer: ` There are four types of @media properties (including screen):
+    all – for all media type devices
+    print – for printers
+    speech – for screenreaders that “reads” the page out loud
+    screen – for computer screens, tablets, smart-phones etc. `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `18. What are the different units used in CSS?`,
+    answer: `CSS has two types of lengths. Relative length and absolute length. Different units are used for them.
+
+    Relative Length
+    
+    UNIT	DESCRIPTION
+    em	Relative to the font-size of the element (2em means 2 times the size of the current font)
+    ex	Relative to the x-height of the current font (rarely used)
+    ch	Relative to the width of the “0” (zero)
+    rem	Relative to font-size of the root element
+    vw	Relative to 1% of the width of the viewport*
+    vh	Relative to 1% of the height of the viewport*
+    vmin	Relative to 1% of viewport’s* smaller dimension
+    vmax	Relative to 1% of viewport’s* larger dimension
+    %	Relative to the parent element
+    Absolute Length
+    
+    UNIT	DESCRIPTION
+    CM	centimetres
+    MM	millimetres
+    IN	inches (1in = 96px = 2.54cm)
+    PX	pixels (1px = 1/96th of 1in)
+    PT	points (1pt = 1/72 of 1in)
+    PC	picas (1pc = 12 pt)  `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `19. What will this piece of CSS code do to an element? .container { margin: 0 auto; }`,
+    answer: `When you have specified a width on the object that you have applied margin: 0 auto to, the object will sit centrally within its parent container. Specifying auto as the second parameter basically tells the browser to automatically determine the left and right margins itself, which it does by setting them equally. It guarantees that the left and right margins will be set to the same size. The first parameter 0 indicates that the top and bottom margins will both be set to 0.  `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `20. What is the overflow property in CSS used for?`,
+    answer: `The overflow property specifies what should happen if content overflows an element’s box. This property specifies whether to clip content or to add scrollbars when an element’s content is too big to fit in a specified area. Below are the overflow options available in CSS – 
+    overflow: auto;
+    overflow: none;
+    overflow: scroll;
+    overflow: visible;  `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `21. What is the property that is used for controlling image-scroll?`,
+    answer: `The background-attachment property sets whether a background image scrolls with the rest of the page, or is fixed. Here is an example of a background-image that will not scroll with the page (fixed):
+    body {
+      background-image: url("img_tree.gif");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }  `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `22. What is responsive web design?`,
+    answer: `Responsive design is an approach to web page creation that makes use of flexible layouts, flexible images and cascading style sheet media queries. The goal of responsive design is to build web pages that detect the visitor’s screen size and orientation and change the layout accordingly.  `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `23. What is the difference between {display: none} and {visibility: hidden}? `,
+    answer: `display:none means that the tag in question will not appear on the page at all (although you can still interact with it through the DOM). There will be no space allocated for it between the other tags.
+    visibility:hidden means that unlike display:none, the tag is not visible, but space is allocated for it on the page. The tag is rendered, it just isn’t seen on the page.  `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `24. What are the various font-related attributes in CSS?`,
+    answer: `Below are the different font-related attributes available in CSS:
+    Font-style
+    Font-variant
+    Font-weight
+    Font-size/line-height
+    Font-family
+    Caption
+    Icon  `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `25. What is the use of box-shadow in CSS?`,
+    answer: `The box-shadow CSS property adds shadow effects around an element’s frame. You can set multiple effects separated by commas. A box-shadow is described by X and Y offsets relative to the element, color, blur and spread radii. Below are a few implementations of box-shadow
+    box-shadow: 10px 5px 5px red;
+    box-shadow: 60px -16px teal;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+    box-shadow: inset 5em 1em gold;  `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `26. What are contextual selectors?`,
+    answer: `Contextual selectors in CSS allow you to specify different styles for different parts of your document. You can assign styles directly to specific HTML tags, or, you could create independent classes and assign them to tags in the HTML. Either approach lets you mix and match styles.
+      `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `27. How would you style an image or element to have rounded corners?`,
+    answer: `Use the border-radius property to add rounded corners to an image. 50% will make the image circular.  `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `28. What is CSS flexbox?`,
+    answer: `The flexbox layout officially called CSS flexible box layout module is a new layout module in CSS3. It is made to improve the items align, directions and order in the container even when they are with dynamic, or even unknown size. The prime characteristic of the flex container is the ability to modify the width or height of its children to fill the available space in the best possible way on different screen sizes.  `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `29. Write all the properties of the flexbox.`,
+    answer: `They are:
+    flex-direction
+    flex-wrap
+    flex-flow
+    justify-content
+    align-items
+    align-content  `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `30. What is the difference between CSS and CSS3 ?`,
+    answer: `CSS3 is upgraded version of CSS with new future like Selectors, Box Model, Backgrounds and Borders, Text Effects,2D/3D Transformations, Animations, Multiple Column Layout, User Interface etc.
+      `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `31. How does a browser determine what elements match a CSS selector?`,
+    answer: `Browsers match selectors from rightmost (key selector) to left. Browsers filter out elements in the DOM according to the key selector and traverse up its parent elements to determine matches. The shorter the length of the selector chain, the faster the browser can determine if that element matches the selector.
+    For example with this selector p span, browsers firstly find all the <span> elements and traverse up its parent all the way up to the root to find the <p> element. For a particular <span>, as soon as it finds a <p>, it knows that the <span> matches and can stop its matching.
+      `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `32. Explain the scenario you would use translate() instead of absolute positioning?  `,
+    answer: `Translate is a value of CSS transform. Changing transform or opacity does not trigger browser reflow or repaint but does trigger compositions; whereas changing the absolute positioning triggers reflow. Transform causes the browser to create a GPU layer for the element but changing absolute positioning properties uses the CPU. Hence translate() is more efficient and will result in shorter paint times for smoother animations.
+    When using translate(), the element still occupies its original space (sort of like position: relative), unlike in changing the absolute positioning.  `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `33. Explain the difference in approach when designing a responsive website over a mobile-first strategy?`,
+    answer: `These two approaches are not exclusive. Making a website responsive means some elements will respond by adapting its size or other functionality according to the device’s screen size, typically the viewport width, through CSS media queries.
+    A mobile-first strategy is also responsive, however, it agrees we should default and define all the styles for mobile devices, and only add specific responsive rules to other devices later. 
+    A mobile-first strategy has 2 main advantages:
+    It’s more performant on mobile devices since all the rules applied for them don’t have to be validated against any media queries
+    It forces to write cleaner code in respect to responsive CSS rules.  `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `34. What are the different ways to position a certain element in CSS?`,
+    answer: `The position property specifies the type of positioning method used for an element.
+    There are five different position values:
+    position: fixed;
+    position: static;
+    position: absolute;
+    position: sticky;
+    position: relative;
+    Elements are then positioned using the top, bottom, left, and right properties. However, these properties will not work unless the position property is set first. They also work differently depending on the position value.
+      `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `35. What effect would this piece of CSS code have? {box-sizing: border-box;} `,
+    answer: `By default, elements have box-sizing: content-box applied, and only the content size is being accounted for.
+    box-sizing: border-box changes how the width and height of elements are being calculated, border and padding are also being included in the calculation.
+    The height of an element is now calculated by the content’s height + vertical padding + vertical border width.
+    The width of an element is now calculated by the content’s width + horizontal padding + horizontal border width.
+    Taking into account paddings and borders as part of our box model resonates better with how designers actually imagine content in grids.  `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `36. What is a CSS pre-processor? When do you recommend a pre-processor be used in a project?`,
+    answer: ` A CSS preprocessor is a program that lets you generate CSS from the preprocessor’s own unique syntax. There are many CSS preprocessors to choose from, however, most CSS preprocessors will add some features that don’t exist in pure CSS, such as mixin, nesting selector, inheritance selector, and so on. These features make the CSS structure more readable and easier to maintain.
+    The usage depends on the type of project but the following advantages/disadvantages come with a preprocessor.
+    Advantages:
+    CSS is made more maintainable.
+    Easy to write nested selectors.
+    Variables for consistent theming. Can share theme files across different projects.
+    Mixins to generate repeated CSS.
+    Sass features like loops, lists, and maps can make configuration easier and less verbose.
+    Splitting your code into multiple files. CSS files can be split up too but doing so will require an HTTP request to download each CSS file.
+    Disadvantages:
+    Requires tools for preprocessing. Re-compilation time can be slow.
+    Not writing currently and potentially usable CSS. For example, by using something like postcss-loader with webpack, you can write potentially future-compatible CSS, allowing you to use things like CSS variables instead of Sass variables. Thus, you’re learning new skills that could pay off if/when they become standardized. `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `37. What’s the difference between a relative, fixed, absolute and statically positioned element?`,
+    answer: `A positioned element is an element whose computed position property is either relative, absolute, fixed or sticky.
+    Static
+    The default position; the element will flow into the page as it normally would. The top, right, bottom, left and z-index properties do not apply.
+    Relative
+    The element’s position is adjusted relative to itself, without changing the layout (and thus leaving a gap for the element where it would have been had it not been positioned).
+    Absolute
+    The element is removed from the flow of the page and positioned at a specified position relative to its closest positioned ancestor if any, or otherwise relative to the initial containing block. Absolutely positioned boxes can have margins, and they do not collapse with any other margins. These elements do not affect the position of other elements.
+    Fixed
+    The element is removed from the flow of the page and positioned at a specified position relative to the viewport and doesn’t move when scrolled.
+    Sticky
+    Sticky positioning is a hybrid of relative and fixed positioning. The element is treated as relative positioned until it crosses a specified threshold, at which point it is treated as fixed positioned.  `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `38. What is file splitting? When is it used?`,
+    answer: ` Part of a good CSS architecture is file organization. A monolithic file is fine for solo developers or very small projects. For large projects—sites with multiple layouts and content types, or multiple brands under the same design umbrella—it’s smarter to use a modular approach and split your CSS across multiple files. `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `39. What are functions/mixins? `,
+    answer: `Functions are blocks of code that return a single value of any Sass data type.  A mixin is very similar to a function. The main difference between the two is that mixins output lines of Sass code that will compile directly into CSS styles, while functions return a value that can then become the value for a CSS property or become something that might be passed to another function or mixin.  `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `40. How does CSS work under the hood? `,
+    answer: `When a browser displays a document, it must combine the document’s content with its style information. It processes the document in two stages:
+    The browser converts HTML and CSS into the DOM (Document Object Model). The DOM represents the document in the computer’s memory. It combines the document’s content with its style.
+    The browser displays the contents of the DOM.  `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `41. What are the different variations of CSS ?`,
+    answer: `The variations for CSS are:
+    CSS 1
+    CSS 2
+    CSS 2.1
+    CSS 3
+    CSS 4  `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `42. What are CSS frameworks?`,
+    answer: ` It is a pre-planned libraries, which allows easier and more standards-compliant webpage styling, using CSS language. `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `43. Define Declaration block?`,
+    answer: `A catalog of directions within braces consisting of property, colon and value is called declaration block.
+    e.g.: [property 1: value 3]  `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `44. Can default property value be restored through CSS? If yes, how?`,
+    answer: `In CSS, you cannot revert back to old values due to lack of default values. The property can be re- declared to get the default property.  `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `45.  How can the dimension be defined of an element ?`,
+    answer: ` Dimension properties can be defined by:
+    Height
+    Max-height
+    Max-width
+    Min-height
+    Min-width
+    Width `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `46. Why is @import only at the top?`,
+    answer: `@import is preferred only at the top, to avoid any overriding rules.   `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `47. Which among the following is more precedent: CSS properties or HTML procedures?`,
+    answer: `CSS is more precedent over HTML procedures. Browsers, which do not have CSS support, display HTML attributes.  `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `48. How an we add comments in CSS? `,
+    answer: `Comments in CSS can be added with /* and */.  `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `49. Explain the concept of Tweening.`,
+    answer: `Tweening is the process in which we create intermediate frames between two images to get the appearance of the first image which develops into the second image.
+    It is mainly used for creating animation.  `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `50. What is CSS specificity? `,
+    answer: `Answer: CSS specificity is a score or rank that decides which style declaration has to be used to an element. (*) this universal selector has low specificity while ID selectors have high specificity.
+    There are four categories in CSS which authorize the specificity level of the selector.
+    Inline style
+    IDs
+    Classes, Attributes, and pseudo-classes.
+    Elements and pseudo-elements. `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `51. How will you add border images to an HTML element? `,
+    answer: `Answer: We can set the image to be used as the border-image alongside an element by using the property of CSS “border-image”.
+
+    #borderimg {
+        border: 15px solid transparent;
+        padding: 20px;
+        border-image: url(border.png) 30 round;
+    }  `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `52. What are gradients in CSS?`,
+    answer: `It is a property of CSS which allows you to display a smooth transformation between two or more than two specified colors.
+    There are two types of gradients that are present in CSS. They are:
+    Linear Gradient
+    Radial Gradient  `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `53. How can we add icons to the web page?`,
+    answer: `We can add icons to the HTML webpage by using an icon library like font-awesome.
+    We have to add the name of the given icon class to any inline HTML element. (<i> or <span>) . Icons in the icon libraries are scalable vectors that can be customized with CSS.
+      `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `54. What is a CSS pseudo-class?`,
+    answer: `It is a class that is used to define a special state of an HTML element.
+    This class can be used by styling an element when a user snooped over it and also it can style an HTML element when it gets the focus.
+      `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `55. What is CSS opacity?`,
+    answer: `It is the property that elaborates on the transparency of an element.
+    By this property, we can transparent the image that can take the values from 0.0-1.0. If the value is lower, then the image is more transparent. IE8 and earlier versions of the browser can take the values from 0-100.
+      `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `56. Define ‘important’ declarations used in CSS.`,
+    answer: `mportant declarations are defined as that declaration which is having more importance than the normal declaration.
+    While executing, these declarations override the declaration which is having less importance.  `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `57. Differentiate between inline and block element.`,
+    answer: `nline element does not have an element to set width and height and also it does not have the line break.
+    Example: em, strong, etc.
+    Block element specification:
+    They do have the line break.
+    They define the width by setting a container and also allow setting height.
+    It can also contain an element that occurs in the inline element.
+    Example:
+    width and height
+    max-width and max-height
+    min-width and min-height
+    hi (i=1-6)- heading element
+    p- Paragraph element.  `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `58. How is the concept of inheritance applied in CSS?`,
+    answer: `Inheritance is a concept in which the child class will inherit the properties of its parent class. It is a concept which is been used in many languages and is the easy way of defining the same property again.
+      `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `59. What is the CSS3 animation? `,
+    answer: `Animation is created in the @keyframe, bind it to a selector, otherwise, the animation will have no effect. 
+    Specify the name of the animation
+    Specify the duration of the animation  `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `60. What is the word wrap/word wrapping in CSS3?`,
+    answer: `word wrap/word wrapping is used to allow long words to be able to break and wrap onto the next line in css3 we used word-wrap property like below class
+    .wrapWord{word-wrap:break-word;}  `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `61. What are CSS3 Transitions? `,
+    answer: `CSS3 transitions allow you to change property values smoothly (from one value to another), over a given duration.  `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `62. Advatages of Css3 animations over scripts `,
+    answer: `Advantages of using CSS3 animations over script-based animation techniques are as follows:
+    1. Easy to use and anybody can create them without the knowledge of JavaScript.
+    2. Executes well even under reasonable system load. As simple animations perform poorly in JavaScript, the rendering engine uses the frame-skipping techniques to allow smooth flow of animation.
+    3. Allows the browser to control the animation sequence, optimize performance and efficiency by reducing the update frequency of animations executing in tabs that aren’t currently visible.  `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `63. What is a reset Css file `,
+    answer: `The goal of a reset stylesheet is to reduce browser inconsistencies in things like default line heights, margins and font sizes of headings
+    The basic reason is that all browsers have presentation defaults, but no browsers have the same defaults.
+    For example, some browsers indent unordered and ordered lists with left margins, whereas others use left padding.
+      `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `64. What is clearfix `,
+    answer: `The clearfix is a CSS hack that solves a persistent bug that occurs when two floated elements are stacked next to each other. When elements are aligned this way, the parent container ends up with a height of 0, and it can easily wreak havoc on a layout. All you might be trying to do is position a sidebar to the left of your main content block, but the result would be two elements that overlap and collapse on each other. To complicate things further, the bug is inconsistent across browsers. The clearfix was invented to solve all that. 
+      `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `65. What is a CSS GRID `,
+    answer: `CSS Grid Layout is the most powerful layout system available in CSS. It is a 2-dimensional system, meaning it can handle both columns and rows, unlike flexbox which is largely a 1-dimensional system. You work with Grid Layout by applying CSS rules both to a parent element (which becomes the Grid Container) and to that element’s children (which become Grid Items). 
+
+    grid-template-columns
+    grid-template-rows
+    Defines the columns and rows of the grid with a space-separated list of values  `,
+  },
+  {
+    id: "c1",
+    language: "Css",
+    question: `66. Do you use any tools for browser support?`,
+    answer: `One of my favourite online tools is caniuse.com. It’s a website that tells you exactly which browsers support which features, including CSS and JavaScript, which can be extremely helpful in finding out what you can and can’t use!  `,
   },
   {
     id: "j1",
