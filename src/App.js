@@ -111,7 +111,7 @@ const App = () => {
       >
         Show Answer{" "}
       </button>
-      <div className="answer"> {toggle ? answer[count] : null}</div>
+      <article className="answer"> {toggle ? answer[count] : null}</article>
 
       <Buttons
         prevQuestion={prevQuestion}
