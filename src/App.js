@@ -14,6 +14,7 @@ const App = () => {
   const [react, setReact] = useState(false);
   const [toggle, setToggle] = useState(false);
 
+
   // filter and map questions
   const getHtml = data.filter((x) => x.language === "Html");
   const getCss = data.filter((x) => x.language === "Css");
