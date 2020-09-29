@@ -1,4 +1,4 @@
-This project is a Questionare from Html, Css, JavaScript and React Questions.
+This project is a Questionare for Html, Css, JavaScript and React job Interview Questions.
 
 Download the code and run npm install in the same directory.
 
