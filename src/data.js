@@ -1127,8 +1127,8 @@ By default, padding and border are not part of the width and height of a
   {
     id: "j1",
     language: "JavaScript",
-    question: `5. `,
-    answer: ` `,
+    question: `5. Which type of variable among global and local, takes precedence over other if names are same?`,
+    answer: `A local variable takes precedence over a global variable with the same name. `,
   },
   {
     id: "j1",
@@ -1977,7 +1977,7 @@ console.log(array1);
     id: "r2",
     language: "React",
     question: `10. Why should we not update the state directly?`,
-    answer: ` you try to update state directly then it won't re-render the component. nstead use setState() method. It schedules an update to a component's state object. When state changes, the component responds by re-rendering. `,
+    answer: `If you try to update state directly then it won't re-render the component. nstead use setState() method. It schedules an update to a component's state object. When state changes, the component responds by re-rendering. `,
   },
   {
     id: "r3",

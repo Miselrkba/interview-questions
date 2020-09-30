@@ -14,7 +14,6 @@ const App = () => {
   const [react, setReact] = useState(false);
   const [toggle, setToggle] = useState(false);
 
-
   // filter and map questions
   const getHtml = data.filter((x) => x.language === "Html");
   const getCss = data.filter((x) => x.language === "Css");
@@ -94,31 +93,33 @@ const App = () => {
   };
 
   return (
-    <div className="App">
-      <h1>Interview Questions</h1>
-      <p>please pick a language or library</p>
-      <Questionaire
-        handleHtml={setHtml}
-        handleCss={setCss}
-        handleJs={setJs}
-        handleReact={setReact}
-      />
-      <h3>Question: </h3>
-      <div className="question">{question[count]}</div>
-      <button
-        className="btn"
-        disabled={html || css || react || js ? false : true}
-        onClick={clicked}
-      >
-        Show Answer{" "}
-      </button>
-      <article className="answer"> {toggle ? answer[count] : null}</article>
+    <div className='container'>
+      <div className="main-box">
+        <h1>Interview Questions</h1>
+        <p>please pick a language or library</p>
+        <Questionaire
+          handleHtml={setHtml}
+          handleCss={setCss}
+          handleJs={setJs}
+          handleReact={setReact}
+        />
+        <h3>Question: </h3>
+        <div className="question">{question[count]}</div>
+        <button
+          className="btn"
+          disabled={html || css || react || js ? false : true}
+          onClick={clicked}
+        >
+          Show Answer{" "}
+        </button>
+        <article className="answer"> {toggle ? answer[count] : null}</article>
 
-      <Buttons
-        prevQuestion={prevQuestion}
-        nextQuestion={nextQuestion}
-        randomQuestion={randomQuestion}
-      />
+        <Buttons
+          prevQuestion={prevQuestion}
+          nextQuestion={nextQuestion}
+          randomQuestion={randomQuestion}
+        />
+      </div>
     </div>
   );
 };
