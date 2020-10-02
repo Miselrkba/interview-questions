@@ -1091,7 +1091,7 @@ By default, padding and border are not part of the width and height of a
     id: "j1",
     language: "JavaScript",
     question: `1. What is JavaScript?`,
-    answer: `JavaScript is an object-oriented programming language or scripting language . In which, the scripts are optimized for both server and client side. It Allows you to implement complex features on web pages. Displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes.t is the third layer of the layer cake of standard web technologies, two of which (HTML and CSS)  `,
+    answer: `JavaScript is an object-oriented programming language or scripting language . In which, the scripts are optimized for both server and client side. It allows you to implement complex features on web pages. Displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes. It is the third layer of the layer cake of standard web technologies, two of which (HTML and CSS)  `,
   },
   {
     id: "j1",
@@ -1128,13 +1128,17 @@ By default, padding and border are not part of the width and height of a
     id: "j1",
     language: "JavaScript",
     question: `5. Which type of variable among global and local, takes precedence over other if names are same?`,
-    answer: `A local variable takes precedence over a global variable with the same name. `,
+    answer: `A local variable takes precedence over a global variable with the same name. Variables declared within a JavaScript function, become LOCAL to the function.
+
+    Local variables have Function scope: They can only be accessed from within the function. A variable declared outside a function, becomes GLOBAL.
+
+    A global variable has global scope: All scripts and functions on a web page can access it. `,
   },
   {
     id: "j1",
     language: "JavaScript",
-    question: `6. Reusability/Inheritance`,
-    answer: `JavaScript inheritance is a mechanism allows us to create a new class using the existing class. It means the child class inherits all the properties and behaviors of the parent class.
+    question: `6. Inheritance/Reusability`,
+    answer: `JavaScript inheritance is a mechanism that allows us to create a new class using the existing class. It means the child class inherits all the properties and behaviors of the parent class.
     Generally, JavaScript is not a class-based language. The keyword class was introduced in ES6 but is syntactical sugar, JavaScript remains prototype-based. In JavaScript inheritance is achieved by using the prototype. This pattern is called Behavior Delegation Pattern or prototypal inheritance. `,
   },
   {
@@ -1189,7 +1193,7 @@ By default, padding and border are not part of the width and height of a
   {
     id: "j1",
     language: "JavaScript",
-    question: `14.Parameters vs arguments `,
+    question: `14.Function parameters vs function arguments `,
     answer: `Function parameters are the names listed in the function definition.
     Function arguments are the real values passed to (and received by) the function. `,
   },
@@ -1217,8 +1221,19 @@ By default, padding and border are not part of the width and height of a
     id: "j1",
     language: "JavaScript",
     question: `18. What is Closure? Give an example. `,
-    answer: `A closure gives you access to an outer function’s scope from an inner function In JavaScript, closures are created every time a function is created. To use a closure, simply define a function inside another function and expose it.
-    A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment)  `,
+    answer: ` A closure is a feature in JavaScript where an inner function has access to the outer (enclosing) function’s variables — a scope chain. The closure has three scope chains:
+    1. it has access to its own scope — variables defined between its curly brackets
+    2. it has access to the outer function’s variables
+    3. it has access to the global variables. 
+    ************************************ function outer() {
+      var b = 10;
+      function inner() {
+           
+            var a = 20; 
+            console.log(a+b);
+       }
+      return inner;
+   } `,
   },
   {
     id: "j1",
@@ -1305,7 +1320,7 @@ By default, padding and border are not part of the width and height of a
   {
     id: "j1",
     language: "JavaScript",
-    question: `29. What is the difference between null & undefined?`,
+    question: `29. What is the difference between undefined & null ?`,
     answer: `Undefined means a variable has been declared but has not yet been assigned a value. On the other hand, null is an assignment value. It can be assigned to a variable as a representation of no value. Also, undefined and null are two distinct types: undefined is a type itself (undefined) while null is an object. `,
   },
   {
@@ -1340,12 +1355,12 @@ By default, padding and border are not part of the width and height of a
     id: "j1",
     language: "JavaScript",
     question: `34. How do you convert numbers between different bases in JavaScript?`,
-    answer: `Use the parseInt() function, that takes a string as the first parameter and the base as a second parameter. So to convert hexadecimal 3F to decimal, use parseInt (“3F”, 16); `,
+    answer: `The parseInt() function parses a string and returns an integer. In Js we use:: 1.Decimal numbers - they make use of 10  symbols from 0 to 9 and its combinations to represent different values. 2. Hexadecimal numbers make use of 16 symbols to represent numbers, it uses the 10 symbols of decimal number system to represent values 0 to 9 and additional 6 symbols (A, B, C, D, E, F) to represent values ( 10, 11, 12, 13, 14, 15) respectively. ****** We use the parseInt() function, that takes a string as the first parameter and the base as a second parameter. Syntax:  parseInt(string, radix). Radix is a Latin word for "root". Root can be considered a synonym for base, in the arithmetical sense. So to convert hexadecimal 3F to decimal, use parseInt (“3F”, 16); `,
   },
   {
     id: "j1",
     language: "JavaScript",
-    question: `35. ow do you assign object properties? `,
+    question: `35. How do you assign object properties? `,
     answer: `obj[“number”] = 123 or obj.number = 123 `,
   },
   {
@@ -1411,7 +1426,7 @@ By default, padding and border are not part of the width and height of a
     id: "j1",
     language: "JavaScript",
     question: `43. What is an Constructor`,
-    answer: `The constructor method is a special method of a class for creating and initializing an object of that class. A constructor enables you to provide any custom initialization that must be done before any other methods can be called on an instantiated object. 58. If you don't provide your own constructor, then a default constructor will be supplied for you. If your class is a base class, the default constructor is empty: `,
+    answer: `The constructor method is a special method of a class for creating and initializing an object of that class. A constructor enables you to provide any custom initialization that must be done before any other methods can be called on an instantiated object. If you don't provide your own constructor, then a default constructor will be supplied for you. If your class is a base class, the default constructor is empty: `,
   },
   {
     id: "j1",
@@ -1977,7 +1992,7 @@ console.log(array1);
     id: "r2",
     language: "React",
     question: `10. Why should we not update the state directly?`,
-    answer: `If you try to update state directly then it won't re-render the component. nstead use setState() method. It schedules an update to a component's state object. When state changes, the component responds by re-rendering. `,
+    answer: `If you try to update state directly then it won't re-render the component. Instead use setState() method. It schedules an update to a component's state object. When state changes, the component responds by re-rendering. `,
   },
   {
     id: "r3",
@@ -2058,7 +2073,7 @@ console.log(array1);
     id: "r3",
     language: "React",
     question: `18. What do you know about controlled and uncontrolled components?`,
-    answer: `Controlled Components - 1. They do not maintain their own state, 2. Data is controlled by the parent component, 3.3. They take in the current values through props and then notify the changes via callbacks. Example: handleChange(event) {
+    answer: `Controlled Components - 1. They do not maintain their own state, 2. Data is controlled by the parent component, 3. They take in the current values through props and then notify the changes via callbacks. Example: handleChange(event) {
       this.setState({value: event.target.value.toUpperCase()})
     }
     Uncontrolled Components- 1. They maintain their own state, 2. Data is controlled by the DOM, 3.3. Refs are used to get their current values. Example: <input type="text" ref={this.input} />  `,
