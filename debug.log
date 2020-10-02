@@ -87,3 +87,5 @@
 [1001/174704.249:ERROR:crash_report_database_win.cc(469)] failed to stat report
 [1001/180204.260:ERROR:crash_report_database_win.cc(469)] failed to stat report
 [1002/073542.676:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1002/172226.942:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1002/174203.886:ERROR:crash_report_database_win.cc(469)] failed to stat report

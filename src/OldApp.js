@@ -1,24 +1,11 @@
 import React, { useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
+import { data } from "./data";
+
 import "./App.css";
 import { Questionaire } from "./components/Questionaire";
 import { Buttons } from "./components/Buttons";
 
-import { data } from "./data";
-
-const useStyles = makeStyles((theme) => ({
-  buttonStyles: {
-    margin: "0.5em",
-    borderRadius: "1em",
-    padding: " 0.5em",
-    textTransform: "capitalize",
-  },
-}));
-
 const App = () => {
-  const classes = useStyles();
-
   //set state for count and languages
   const [count, setCount] = useState(0);
   const [html, setHtml] = useState(false);
@@ -45,24 +32,35 @@ const App = () => {
   const oneJsAnswer = getJs.map((item) => item.answer);
   const oneReactAnswer = getReact.map((item) => item.answer);
 
-  // push to question and answer array onChecked
+  // push to question array onChecked
   let question = [];
-  let answer = [];
 
   if (html) {
     question.push(...oneHtmlQuestion);
-    answer.push(...oneHtmlAnswer);
   }
   if (css) {
     question.push(...oneCssQuestion);
-    answer.push(...oneCssAnswer);
   }
   if (js) {
     question.push(...oneJsQuestion);
-    answer.push(...oneJsAnswer);
   }
   if (react) {
     question.push(...oneReactQuestion);
+  }
+
+  // push to answer array onChecked
+  let answer = [];
+
+  if (html) {
+    answer.push(...oneHtmlAnswer);
+  }
+  if (css) {
+    answer.push(...oneCssAnswer);
+  }
+  if (js) {
+    answer.push(...oneJsAnswer);
+  }
+  if (react) {
     answer.push(...oneReactAnswer);
   }
 
@@ -95,7 +93,7 @@ const App = () => {
   };
 
   return (
-    <div className="container">
+    <div className='container'>
       <div className="main-box">
         <h1>Interview Questions</h1>
         <p>please pick a language or library</p>
@@ -107,15 +105,13 @@ const App = () => {
         />
         <h3>Question: </h3>
         <div className="question">{question[count]}</div>
-        <Button
-          className={classes.buttonStyles}
-          variant="contained"
-          size="small"
+        <button
+          className="btn"
           disabled={html || css || react || js ? false : true}
           onClick={clicked}
         >
-          {toggle ? "Hide Answer" : "Show Answer"}
-        </Button>
+          Show Answer{" "}
+        </button>
         <article className="answer"> {toggle ? answer[count] : null}</article>
 
         <Buttons
