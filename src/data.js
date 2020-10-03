@@ -1459,7 +1459,7 @@ By default, padding and border are not part of the width and height of a
     id: "j1",
     language: "JavaScript",
     question: `48. What are the different objects used in JavaScripts?`,
-    answer: `avaScript uses a hierarchical structure that applies to the objects in a document. There are some objects that show the relationship of one object to another using the language.
+    answer: `JavaScript uses a hierarchical structure that applies to the objects in a document. There are some objects that show the relationship of one object to another using the language.
     Window object :
     This is the topmost object in the hierarchy. It represent the content area of browser window that consists of HTML documents. Each frame is also a window that has some actions inside it.
     Document object :
@@ -1471,7 +1471,7 @@ By default, padding and border are not part of the width and height of a
     id: "j1",
     language: "JavaScript",
     question: `49. Adding JavaScript into an HTML Document `,
-    answer: `ou can add JavaScript code in an HTML document by employing the dedicated HTML tag <script> that wraps around JavaScript code.
+    answer: `You can add JavaScript code in an HTML document by employing the dedicated HTML <script> tag that wraps around JavaScript code.
     The <script> tag can be placed in the <head> section of your HTML, in the <body> section, or after the </body> close tag, depending on when you want the JavaScript to load.
     In order to accommodate larger scripts or scripts that will be used across several pages, JavaScript code generally lives in one or more js files that are referenced within HTML documents, similarly to how external assets like CSS are referenced. 
     We can add a reference to this script to or below the <body> section, with the following line of code:
@@ -1524,7 +1524,7 @@ By default, padding and border are not part of the width and height of a
     id: "j1",
     language: "JavaScript",
     question: `55.What is an event bubbling in JavaScript? `,
-    answer: `Event bubbling is a way of event propagation in the HTML DOM API, when an event occurs in an element inside another element, and both elements have registered a handle for that event. With bubbling, the event is first captured and handled by the innermost element and then propagated to outer elements. The execution starts from that event and goes to its parent element. Then the execution passes to its parent element and so on till the body element. `,
+    answer: `By default, events bubble in JavaScript. Event bubbling is when an event will traverse from the most inner nested HTML element and move up the DOM hierarchy until it arrives at the element which listens for the event. This move is also popularly known as Event Propagation or Event Delegation.`,
   },
   {
     id: "j1",
@@ -1553,16 +1553,10 @@ By default, padding and border are not part of the width and height of a
     language: "JavaScript",
     question: `59. How to empty an Array in JavaScript? `,
     answer: `Method 1 –
-
-
     1
     arrayList = []
     Above code will set the variable arrayList to a new empty array. This is recommended if you don’t have references to the original array arrayList anywhere else, because it will actually create a new, empty array. You should be careful with this method of emptying the array, because if you have referenced this array from another variable, then the original reference array will remain unchanged.
-    
     Method 2 –
-    
-    
-    1
     arrayList.length = 0;
     The code above will clear the existing array by setting its length to 0. This way of emptying the array also updates all the reference variables that point to the original array. Therefore, this method is useful when you want to update all reference variables pointing to arrayList. `,
   },
@@ -1570,30 +1564,25 @@ By default, padding and border are not part of the width and height of a
     id: "j1",
     language: "JavaScript",
     question: `60.Event Delegation `,
-    answer: `JavaScript event delegation is a simple technique by which you add a single event handler to a parent element in order to avoid having to add event handlers to multiple child elements. 53. vent delegation makes use of two often overlooked features of JavaScript events: event bubbling and the target element. When an event is triggered on an element, for example a mouse click on a button, the same event is also triggered on all of that element’s ancestors. This process is known as event bubbling; the event bubbles up from the originating element to the top of the DOM tree. The target element of any event is the originating element, the button in our example, and is stored in a property of the event object. Using event delegation it’s possible to add an event handler to an element, wait for an event to bubble up from a child element and easily determine from which element the event originated.  `,
+    answer: `When an event is triggered, (mouse click button) it gets triggered on all of that element’s parents. The event bubbles up from the originating element to the top of the DOM tree.  `,
   },
   {
     id: "j1",
     language: "JavaScript",
     question: `61.Protype inheritance`,
-    answer: `54. When it comes to inheritance, JavaScript only has one construct: objects. Each object has a private property which holds a link to another object called its prototype. That prototype object has a prototype of its own, and so on until an object is reached with null as its prototype. By definition, null has no prototype, and acts as the final link in this prototype chain.
+    answer: `When it comes to inheritance, JavaScript only has one construct: objects. Each object has a private property which holds a link to another object called its prototype. That prototype object has a prototype of its own, and so on until an object is reached with null as its prototype. By definition, null has no prototype, and acts as the final link in this prototype chain.
     Nearly all objects in JavaScript are instances of Object which sits on the top of a prototype chain. `,
   },
   {
     id: "j1",
     language: "JavaScript",
     question: `62.AMD vs. CommonJS? Vs ES6  `,
-    answer: `CommonJS (CJS)
-
-    This system relies on importing and exporting modules thanks to some well-known keywords: require and exports.7
+    answer: `CommonJS (CJS) system relies on importing and exporting modules using require and exports.
     The commonJS team created this API as a synchronous one which is not that good for browsers... Moreover, Commonjs isn't natively understood by browsers; it requires either a loader library or some transpiling.
-    
-    
+        
     Asynchronous Module Definition (AMD)
     AMD is some kind of a split of CommonJS. It has been created by members of the CJS team that disagreed with the direction taken by the rest of the team.
-    
     They've decided to create AMD to support asynchronous module loading. This is the module system used by RequireJS and that is working client-side (in browsers).
-    
     ES2015 Modules (ESM)
     As those 3 formats are not that easy to read, hard to analyze for static code analyzer and not supported everywhere, The ECMA team (the team behind the standardization of Javascript) decided to create the ECMAScript 2015 (also known as ES6) standard. This format is really simple to read and write and supports both synchronous and asynchronous modes of operation. `,
   },
@@ -1607,7 +1596,7 @@ By default, padding and border are not part of the width and height of a
   {
     id: "j1",
     language: "JavaScript",
-    question: `64.anynymous funtions `,
+    question: `64.Anynymous funtions `,
     answer: `The function (Anonymous) operator syntax is more concise then the function declaration (Standard). It's ideal for for single line event handlers and dealing with styling DOM elements quickly.   `,
   },
   {
@@ -1663,7 +1652,7 @@ By default, padding and border are not part of the width and height of a
     question: `70. Document.Write()`,
     answer: `When document.write() is executed after page load, it replaces the entire header and body tag with the given parameter value in string. An invocation could look like this:
     document.write(‘<h1>hello world</h1>’);
-    When working with web application, it is uncommon task to overwrite an entire page, hence why using document.write() is bad practice. It cannot inject string text into a given node point unlike jQuery library selectors and native JavaScript methods. Ref: https://developer.mozilla.org/en-US/docs/Web/API/Document
+    When working with web applications, it is an uncommon task to overwrite an entire page, hence why using document.write() is bad practice. It cannot inject string text into a given node point unlike jQuery library selectors and native JavaScript methods. 
     Another reason not to use document.write() is it doesn’t support XHTML, but its not an issue since most web development uses HTML. Since document.write() fires after a page has finish loading, it causes performance issues and sometimes, may not even fire at all.
     The only seem appropriate usage for document.write() is when working third parties like Google Analytics and such for including their scripts. This is because document.write() is mostly available in any browser. Since third party companies have no control over the user’s browser dependencies (ex. jQuery), document.write() can be used as a fallback or a default method. `,
   },
@@ -1693,13 +1682,15 @@ By default, padding and border are not part of the width and height of a
     id: "j1",
     language: "JavaScript",
     question: `73.Hoisting `,
-    answer: `Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope (to the top of the current script or the current function).  
+    answer: `Hoisting is a JavaScript mechanism where variables and function DECLARATIONS are moved to the top of their scope BEFORE code execution.
+   This means that no matter where functions and variables are declared, they are moved to the top of their scope regardless of whether their scope is global or local.  
     Variables defined with let and const are hoisted to the top of the block, but not initialized.
     Meaning: The block of code is aware of the variable, but it cannot be used until it has been declared.
     In other words; a variable can be used before it has been declared. 
     x = 5; // Assign 5 to x
     
     elem = document.getElementById("demo"); // Find an element
+
     elem.innerHTML = x;                     // Display x in the element
     
     var x; // Declare x
@@ -1746,7 +1737,7 @@ By default, padding and border are not part of the width and height of a
     id: "j1",
     language: "JavaScript",
     question: `77. Array.prototype.forEach() `,
-    answer: `The forEach() method executes a provided function once for each array element. *************** array1.forEach(element => console.log(element)); ***** `,
+    answer: `The forEach() method executes a provided function once for each array element. It does not mutate the array on which it is called.  (However if you define a callback it may do so) *************** array1.forEach(element => console.log(element)); ***** `,
   },
   {
     id: "j1",
@@ -1877,16 +1868,18 @@ console.log(firstElement);
     id: "j1",
     language: "JavaScript",
     question: `87. Array.prototype.slice()`,
-    answer: `The slice() method returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included) where start and end represent the index of items in that array. The original array will not be modified.
+    answer: `The slice() method selects the elements starting at the given start argument, and ends at, but does not include, the given end argument.
+
+    Note: The original array will not be changed. SYNTAX array.slice(start, end).
 
 ****************   const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
 
 console.log(animals.slice(2));
 // expected output: Array ["camel", "duck", "elephant"]
-
+************************
 console.log(animals.slice(2, 4));
 // expected output: Array ["camel", "duck"]
-
+************************
 console.log(animals.slice(1, 5));
 // expected output: Array ["bison", "camel", "duck", "elephant"]
   `,
