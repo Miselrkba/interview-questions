@@ -24,7 +24,11 @@ export const data = [
     id: "h1",
     language: "Html",
     question: `4. What are some of the common lists that can be used when designing a page?`,
-    answer: `What are some of the common lists that can be used when designing a page? `,
+    answer: `There are three list types in HTML:
+
+    1.unordered list — used to group a set of related items in no particular order
+    2.ordered list — used to group a set of related items in a specific order
+    3.description list — used to display name/value pairs such as terms and definitions`,
   },
   {
     id: "h1",
@@ -43,7 +47,7 @@ export const data = [
     id: "h1",
     language: "Html",
     question: `7. What is an image map?`,
-    answer: `Image map lets you link to many different web pages using a single image. You can define shapes in images that you want to make part of an image mapping.
+    answer: `The HTML <map> tag defines an image map. An image map is an image with clickable areas. The areas are defined with one or more <area> tags..
      `,
   },
   {
@@ -116,14 +120,14 @@ export const data = [
     id: "h1",
     language: "Html",
     question: `18. What is a marquee?`,
-    answer: `A marquee allows you to put a scrolling text in a web page. To do this, place whatever text you want to appear scrolling within the <marquee> and </marquee> tags.
+    answer: `A marquee allows you to put a scrolling text in a web page. To do this, place whatever text you want to appear scrolling within the <marquee> and </marquee> tags. The <marquee> tag deprecated in HTML5. Do not use this element, instead you can use JavaScript and CSS to create such effects.
      `,
   },
   {
     id: "h1",
     language: "Html",
     question: `19.How do you create text on a webpage that will allow you to send an email when clicked? `,
-    answer: `<A HREF=”mailto:youremailaddress”>text to be clicked</A> `,
+    answer: `<a href=”mailto:youremailaddress”>text to be clicked</a> `,
   },
   {
     id: "h1",
@@ -162,7 +166,7 @@ export const data = [
   {
     id: "h1",
     language: "Html",
-    question: `25. Do you know which are two semantic tags are included in HTML5 version?`,
+    question: `25. Do you know which two semantic tags are included in HTML5 version?`,
     answer: `The <article> and <section> tags are two new tags that are included in HTML5. Articles can be composed of multiple sections that can have multiple articles. An article tag represents a full block of content which is a section of a bigger whole. `,
   },
   {
@@ -263,7 +267,11 @@ export const data = [
     id: "h1",
     language: "Html",
     question: `36. What is semantic HTML?`,
-    answer: `Semantic HTML is a coding style. It is the use of HTML markup to reinforce the semantics or meaning of the content. For example: In semantic HTML <b> </b> tag is not used for bold statement as well as <i> </i> tag is used for italic. Instead of these we use <strong></strong> and <em></em> tags. `,
+    answer: `A semantic element clearly describes its meaning to both the browser and the developer.
+
+    Examples of non-semantic elements: <div> and <span> - Tells nothing about its content.
+    
+    Examples of semantic elements: <form>, <table>, and <article> - Clearly defines its content.`,
   },
   {
     id: "h1",
@@ -291,8 +299,8 @@ export const data = [
     question: `40. What is the use of a span tag? Give one example.`,
     answer: `The span tag is used for following things:
 
-    For adding color on text
-    For adding background on text
+    For adding color on text.
+    .For adding background on text.
     Highlight any color text `,
   },
   {
@@ -308,7 +316,7 @@ export const data = [
     id: "h1",
     language: "Html",
     question: `42. What is SVG?`,
-    answer: `stands for Scalable Vector Graphics which is used to create vector graphics with the support for interactivity and animation.
+    answer: `Scalable Vector Graphics is used to create vector graphics with the support for interactivity and animation.
 
     SVG is resolution independent as it does not lose its quality when they are resized or zoomed. SVG images and their behaviors are defined in XML text files. So as XML files, you can create and edit an SVG image with the text editor. It is mostly used for vector type diagrams like pie charts, 2-Dimensional graphs in an X, Y coordinate system. *********************
     <svg width="100" height="100">    
@@ -319,17 +327,22 @@ export const data = [
     id: "h1",
     language: "Html",
     question: `43. Which type of video formats are supported by HTML5?`,
-    answer: `mp4
-    WebM
-    Ogg `,
+    answer: `1.mp4
+    2.WebM
+    3.Ogg `,
   },
   {
     id: "h1",
     language: "Html",
     question: `44. Is audio tag supported in HTML 5?`,
-    answer: `mp3
-    WAV
-    Ogg ************ <audio controls>    
+    answer: `3 Types are supported :
+    1.mp3
+    2.WAV
+    3.Ogg
+    ************
+    Example: 
+    ***********
+     <audio controls>    
     <source src="koyal.mp3" type="audio/mpeg">    
   Your browser does not support the html audio tag.    
   </audio>    *********`,
@@ -338,7 +351,7 @@ export const data = [
     id: "h1",
     language: "Html",
     question: `45. What is the difference between progress and meter tag?`,
-    answer: `The progress tag is used to represent the progress of the task only while the meter tag is used to measure data within a given range. More details. `,
+    answer: `The progress tag is used to represent the progress of the task only while the meter tag is used to measure data within a given range.`,
   },
   {
     id: "h1",
@@ -399,7 +412,7 @@ export const data = [
   {
     id: "h1",
     language: "Html",
-    question: `53. What are inline elements and block-level elements in HTML?`,
+    question: `53. What are block-level elements and inline elements in HTML?`,
     answer: `Answer: Block elements are the blocks that take the full available width and always start from a new line. It will stretch itself to the full available width of the available container width. Block-level elements are <div>, <p>, <img>, <section> and many more.
 
     Inline elements are the elements that will only take the width that is required to fit into the container.
@@ -411,7 +424,7 @@ export const data = [
   {
     id: "h1",
     language: "Html",
-    question: `54. Why Meta tags are used in HTML?`,
+    question: `54. Why are Meta tags used in HTML?`,
     answer: `Meta tags in HTML are used by the developer to tell the browser about the page description, author of the template, character set, keywords and many more.
 
     Meta tags are used for search engine optimization to tell the search engine about the page contents. `,
@@ -444,7 +457,7 @@ export const data = [
     question: `58. How Do I Make A Form So It Can Be Submitted By Hitting Enter?
 
     `,
-    answer: `the form should just have one <INPUT TYPE=TEXT> and no TEXTAREA, though it can have other form elements like checkboxes and radio buttons. `,
+    answer: `The form should just have one <INPUT TYPE=TEXT> and no TEXTAREA, though it can have other form elements like checkboxes and radio buttons. `,
   },
   {
     id: "h1",
@@ -522,28 +535,23 @@ export const data = [
     id: "c1",
     language: "Css",
     question: `6. Name a few prominent CSS frameworks.`,
-    answer: `Bootstrap
-
-    Bootstrap is the most popular CSS framework for developing responsive and mobile-first websites. Bootstrap 4 is the newest version of Bootstrap
+    answer: `1. Bootstrap is the most popular CSS framework for developing responsive and mobile-first websites. Bootstrap 4 is the newest version of Bootstrap
     
-    Foundation
-    
-    Foundation is a responsive front-end framework. Foundation provides a responsive grid and HTML and CSS UI components, templates, and code snippets, including typography, forms, buttons, navigation and other interface elements, as well as optional functionality provided by JavaScript extensions.
+    2. Foundation is a responsive front-end framework. Foundation provides a responsive grid and HTML and CSS UI components, templates, and code snippets, including typography, forms, buttons, navigation and other interface elements, as well as optional functionality provided by JavaScript extensions.
     
     Semantic UI
     Semantic UI is a modern front-end development framework, powered by LESS and jQuery. It has a sleek, subtle, and flat design look that provides a lightweight user experience.
     
-    Ulkit
-    UIkit is a lightweight and modular front-end framework for developing fast and UIkit logo. `,
+    3.UIkit is a lightweight and modular front-end framework for developing fast and UIkit logo. `,
   },
   {
     id: "c1",
     language: "Css",
     question: `7. What is the difference between the usage of an ID and a Class?`,
-    answer: ` ID – An ID is unique. A particular ID can be only assigned to a single element. IDs are used when specific styling is being tried to be achieved over a single element. Below is a pictorial example of how to use an ID.
+    answer: ` ID – An ID is unique. A particular ID can be only assigned to a single element. IDs are used when specific styling is being tried to be achieved over a single element.
 
 
-    Class – Just like the word suggests, a class is a collective way of targetting HTML elements for styling. Classes are not unique and multiple elements can have the same class. In fact, multiple classes can also be added to the same element to achieve the desired style and look. Below is an example of the usage of classes.
+    Class – Just like the word suggests, a class is a collective way of targetting HTML elements for styling. Classes are not unique and multiple elements can have the same class. In fact, multiple classes can also be added to the same element to achieve the desired style and look.
     `,
   },
   {
@@ -577,7 +585,7 @@ export const data = [
     id: "c1",
     language: "Css",
     question: `11. Explain the CSS Box Model and its different elements.`,
-    answer: `The CSS box model describes the rectangular boxes that are generated for elements in the document tree and laid out according to the visual formatting model. Each box has a content area (e.g. text, an image, etc.) and an optional surrounding padding, border, and margin
+    answer: `The CSS box model describes the rectangular boxes that are generated for elements in the document tree and laid out according to the visual formatting model. Each box has a content area (e.g. text, an image, etc.) and an optional surrounding padding, border, and margin.
     The box model has the following rules:
 The dimensions of a block element are calculated by width, height, padding, borders, and margin.
 If no height is specified, a block element will be as high as the content it contains, plus padding.
@@ -635,10 +643,10 @@ By default, padding and border are not part of the width and height of a
     language: "Css",
     question: `17. What are the different media types allowed by CSS?`,
     answer: ` There are four types of @media properties (including screen):
-    all – for all media type devices
-    print – for printers
-    speech – for screenreaders that “reads” the page out loud
-    screen – for computer screens, tablets, smart-phones etc. `,
+    1.all – for all media type devices
+    2.print – for printers
+    3.speech – for screenreaders that “reads” the page out loud
+    4.screen – for computer screens, tablets, smart-phones etc. `,
   },
   {
     id: "c1",
@@ -646,27 +654,27 @@ By default, padding and border are not part of the width and height of a
     question: `18. What are the different units used in CSS?`,
     answer: `CSS has two types of lengths. Relative length and absolute length. Different units are used for them.
 
-    Relative Length
+    RELATIVE LENGTH
     
-    UNIT	DESCRIPTION
-    em	Relative to the font-size of the element (2em means 2 times the size of the current font)
-    ex	Relative to the x-height of the current font (rarely used)
-    ch	Relative to the width of the “0” (zero)
-    rem	Relative to font-size of the root element
-    vw	Relative to 1% of the width of the viewport*
-    vh	Relative to 1% of the height of the viewport*
-    vmin	Relative to 1% of viewport’s* smaller dimension
-    vmax	Relative to 1% of viewport’s* larger dimension
-    %	Relative to the parent element
-    Absolute Length
-    
-    UNIT	DESCRIPTION
-    CM	centimetres
-    MM	millimetres
-    IN	inches (1in = 96px = 2.54cm)
-    PX	pixels (1px = 1/96th of 1in)
-    PT	points (1pt = 1/72 of 1in)
-    PC	picas (1pc = 12 pt)  `,
+    1.em	Relative to the font-size of the element (2em means 2 times the size of the current font)
+    2.ex	Relative to the x-height of the current font (rarely used)
+    3.ch	Relative to the width of the “0” (zero)
+    4.rem	Relative to font-size of the root element
+    5.vw	Relative to 1% of the width of the viewport*
+    6.vh	Relative to 1% of the height of the viewport*
+    7.vmin	Relative to 1% of viewport’s* smaller dimension
+    8.vmax	Relative to 1% of viewport’s* larger dimension
+    9.%	Relative to the parent element
+    *****************
+    ABSOLUTE LENGTH
+    *****************
+   
+    1.CM	centimetres
+    2.MM	millimetres
+    3.IN	inches (1in = 96px = 2.54cm)
+    4.PX	pixels (1px = 1/96th of 1in)
+    5.PT	points (1pt = 1/72 of 1in)
+    6.PC	picas (1pc = 12 pt)  `,
   },
   {
     id: "c1",
@@ -840,15 +848,15 @@ By default, padding and border are not part of the width and height of a
     language: "Css",
     question: `37. What’s the difference between a relative, fixed, absolute and statically positioned element?`,
     answer: `A positioned element is an element whose computed position property is either relative, absolute, fixed or sticky.
-    Static
+    1.Static
     The default position; the element will flow into the page as it normally would. The top, right, bottom, left and z-index properties do not apply.
-    Relative
+    2.Relative
     The element’s position is adjusted relative to itself, without changing the layout (and thus leaving a gap for the element where it would have been had it not been positioned).
-    Absolute
+    3.Absolute
     The element is removed from the flow of the page and positioned at a specified position relative to its closest positioned ancestor if any, or otherwise relative to the initial containing block. Absolutely positioned boxes can have margins, and they do not collapse with any other margins. These elements do not affect the position of other elements.
-    Fixed
+    4.Fixed
     The element is removed from the flow of the page and positioned at a specified position relative to the viewport and doesn’t move when scrolled.
-    Sticky
+    5.Sticky
     Sticky positioning is a hybrid of relative and fixed positioning. The element is treated as relative positioned until it crosses a specified threshold, at which point it is treated as fixed positioned.  `,
   },
   {
@@ -998,14 +1006,14 @@ By default, padding and border are not part of the width and height of a
     id: "c1",
     language: "Css",
     question: `56. Define ‘important’ declarations used in CSS.`,
-    answer: `mportant declarations are defined as that declaration which is having more importance than the normal declaration.
+    answer: `Important declarations are defined as that declaration which is having more importance than the normal declaration.
     While executing, these declarations override the declaration which is having less importance.  `,
   },
   {
     id: "c1",
     language: "Css",
     question: `57. Differentiate between inline and block element.`,
-    answer: `nline element does not have an element to set width and height and also it does not have the line break.
+    answer: `Inline element does not have an element to set width and height and also it does not have the line break.
     Example: em, strong, etc.
     Block element specification:
     They do have the line break.
@@ -1059,7 +1067,7 @@ By default, padding and border are not part of the width and height of a
     id: "c1",
     language: "Css",
     question: `63. What is a reset Css file `,
-    answer: `The goal of a reset stylesheet is to reduce browser inconsistencies in things like default line heights, margins and font sizes of headings
+    answer: `The goal of a reset stylesheet is to reduce browser inconsistencies in things like default line heights, margins and font sizes of headings.
     The basic reason is that all browsers have presentation defaults, but no browsers have the same defaults.
     For example, some browsers indent unordered and ordered lists with left margins, whereas others use left padding.
       `,
